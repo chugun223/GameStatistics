@@ -1,4 +1,4 @@
-Архитектура проекта (MVC)
+АРХИТЕКТУРА ПРОЕКТА (MVC)
 
 Проект реализован с использованием паттерна Model-View-Controller(MVC) и поддерживает два независимых представления с одинаковой логикой.
 
@@ -32,7 +32,7 @@ TG bot view
 
 ****************************************************************************************************************
 
-Последовательность работы проекта
+ПОСЛЕДОВАТЕЛЬНОСТЬ РАБОТЫ ПРОЕКТА
 
 1. При запуске создаётся Model:
    DBmanager загружает данные
@@ -59,5 +59,20 @@ TG bot view
 8. View отображает результат:
    текст в GUI / сообщение в Telegram
    либо строит график (desktop-версия) или отправляет фото графика (tgbot-версия)
+<img width="1284" height="996" alt="вывод графика_destop" src="https://github.com/user-attachments/assets/ed48aeee-8c8e-4a49-a188-c46c5914101b" />
+<img width="248" height="305" alt="пример выводов_desktop" src="https://github.com/user-attachments/assets/91b86695-9b9f-4244-be27-0d4bad965228" />
+<img width="546" height="199" alt="пример выводов_TGbot" src="https://github.com/user-attachments/assets/58890ef5-9bf7-47ea-9492-fb17e28f4d27" />
 
-   <img width="1024" height="1024" alt="изображение" src="https://github.com/user-attachments/assets/c3ad38d6-ca79-4ee8-b8b3-0041783f578f" />
+****************************************************************************************************************
+
+ТЕСТИРОВАНИЕ
+
+Используется JUnit 5
+Mockito для моков БД
+Покрытие класса Resolver:
+Instructions: 100%
+Branches: 95%
+<img width="1166" height="138" alt="результаты тестирования games_project.model.resolver" src="https://github.com/user-attachments/assets/d9d15a88-fe56-4f6a-9cd8-9c1532e5b05f" />
+
+
+
