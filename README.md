@@ -3,7 +3,7 @@
 Проект реализован с использованием паттерна Model-View-Controller(MVC) и поддерживает два независимых представления с одинаковой логикой.  
   
 Model Отвечает за данные и логику:  
-entity - сущностm gameEntity  
+entity - сущность gameEntity  
 repository - доступ к данным  
 DBmanager resolver - аналитика и вычисления Resolver  
 game - сама модель  
