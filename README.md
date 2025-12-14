@@ -2,33 +2,29 @@
 
 Проект реализован с использованием паттерна Model-View-Controller(MVC) и поддерживает два независимых представления с одинаковой логикой.
 
-Model
-Отвечает за данные и логику:
-entity - сущностm gameEntity
-repository - доступ к данным DBmanager
-resolver - аналитика и вычисления Resolver
+Model Отвечает за данные и логику: 
+entity - сущностm gameEntity 
+repository - доступ к данным 
+DBmanager resolver - аналитика и вычисления Resolver 
 game - сама модель
 
-Controller
-Связывает Model и View:
+Controller 
+Связывает Model и View: 
 controller - вызывает методы Resolver`а и возвращает результат представлениям
 
-View
+View 
 Проект содержит два отдельных представления, использующих один Controller:
-
 Desktop View
 Пакет view_desktop
 Реализация на Swing
 Класс: MainWindow
-Отображает:
-  текстовые результаты
-  графики через JFreeChart
+Отображает:текстовые результаты
+графики через JFreeChart 
 
-TG bot view
-Пакет view_bot
-Реализация через Telegram Bots API
-Класс: GameBot
-Предоставляет тот же функционал, что и desktop-версия, через команды Telegram(график передается в виде картинки)
+TG bot view 
+Пакет view_bot 
+Реализация через Telegram Bots APIКласс: 
+GameBotПредоставляет тот же функционал, что и desktop-версия, через команды Telegram(график передается в виде картинки)
 
 ****************************************************************************************************************
 
