@@ -55,7 +55,7 @@ GameBotПредоставляет тот же функционал, что и de
 8. View отображает результат:  
    текст в GUI / сообщение в Telegram  
    либо строит график (desktop-версия) или отправляет фото графика (tgbot-версия)  
-<img width="1284" height="996" alt="вывод графика_destop" src="https://github.com/user-attachments/assets/ed48aeee-8c8e-4a49-a188-c46c5914101b" />  
+ 
 <img width="248" height="305" alt="пример выводов_desktop" src="https://github.com/user-attachments/assets/91b86695-9b9f-4244-be27-0d4bad965228" />  
 <img width="546" height="199" alt="пример выводов_TGbot" src="https://github.com/user-attachments/assets/58890ef5-9bf7-47ea-9492-fb17e28f4d27" />  
   
