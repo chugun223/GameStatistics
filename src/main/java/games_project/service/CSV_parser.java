@@ -44,7 +44,6 @@ public class CSV_parser {
 
     private static double parseDoubleSafe(String s) {
         if (s == null || s.isEmpty() || s.equalsIgnoreCase("N/A")) return 0.0;
-        s = s.replace(",", ".");
         try {
             return Double.parseDouble(s);
         } catch (NumberFormatException e) {

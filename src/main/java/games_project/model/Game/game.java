@@ -28,10 +28,7 @@ public class game{
         this.otherSales = otherSales;
         this.globalSales = globalSales;
     }
-    @Override
-    public String toString() {
-        return Double.toString(globalSales);
-    }
+
     public double getEUSales() {
         return this.euSales;
     }

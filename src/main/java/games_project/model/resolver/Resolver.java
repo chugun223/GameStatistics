@@ -57,7 +57,6 @@ public class Resolver implements IResolver {
     }
 
     public String getGenrePreferencesByRegion() {
-        Map<String, Map<String, Double>> regionGenreSales = new HashMap<>();
         String naGenres = games.stream()
                 .filter(gameEntity -> gameEntity.getGenre() != null)
                 .collect(Collectors.groupingBy(

@@ -18,31 +18,29 @@ public class gameEntity {
     @DatabaseField(canBeNull = false)
     private String platform;
 
-    @DatabaseField
+    @DatabaseField(canBeNull = false)
     private int year;
 
-    @DatabaseField
+    @DatabaseField(canBeNull = false)
     private String genre;
 
-    @DatabaseField
+    @DatabaseField(canBeNull = false)
     private String publisher;
 
-    @DatabaseField
+    @DatabaseField(canBeNull = false)
     private double naSales;
 
-    @DatabaseField
+    @DatabaseField(canBeNull = false)
     private double euSales;
 
-    @DatabaseField
+    @DatabaseField(canBeNull = false)
     private double jpSales;
 
-    @DatabaseField
+    @DatabaseField(canBeNull = false)
     private double otherSales;
 
-    @DatabaseField
+    @DatabaseField(canBeNull = false)
     private double globalSales;
-
-    public gameEntity() {}
 
     public gameEntity(int rank, String name, String platform, int year, String genre, String publisher, double naSales, double euSales, double jpSales, double otherSales, double globalSales) {
         this.rank = rank;
@@ -96,4 +94,5 @@ public class gameEntity {
     public String getPublisher(){
         return this.publisher;
     }
+    public gameEntity() {}
 }
