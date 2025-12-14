@@ -1,6 +1,6 @@
 package games_project.controller;
 
-import games_project.infrastructure.parser.CSV_parser;
+import games_project.service.CSV_parser;
 import games_project.model.Game.game;
 import games_project.model.entity.gameEntity;
 import games_project.model.repository.DBmanager;
@@ -38,13 +38,7 @@ public class Controller {
     public void showSalesChart() {
         var salesByPlatform = resolver.getAverageGlobalSalesByPlatform();
         DefaultCategoryDataset dataset = chartMapper.mapToDataset(salesByPlatform);
-
-        chartDrawer.drawBarChart(
-                dataset,
-                "Average Global Sales by Platform",
-                "Platform",
-                "Global Sales"
-        );
+        chartDrawer.drawBarChart(dataset, "Average Global Sales by Platform", "Platform", "Global Sales");
     }
 
     public String getMostProfitableGenre() {
@@ -68,11 +62,7 @@ public class Controller {
         }
 
         for (game g : games) {
-            gameEntity entity = new gameEntity(
-                    g.rank, g.name, g.platform, g.year, g.genre,
-                    g.publisher, g.naSales, g.euSales, g.jpSales,
-                    g.otherSales, g.globalSales
-            );
+            gameEntity entity = new gameEntity(g.rank, g.name, g.platform, g.year, g.genre, g.publisher, g.naSales, g.euSales, g.jpSales, g.otherSales, g.globalSales);
             db.saveGame(entity);
         }
     }

@@ -1,5 +1,5 @@
 package games_project.view_desktop;
-//getYearWithMostReleases getPublisherWithMostReleases getPlatformWithMostGenres
+
 import games_project.controller.Controller;
 
 import javax.swing.*;
@@ -76,15 +76,20 @@ public class MainWindow extends JFrame {
         chartBtn.addActionListener(e -> controller.showSalesChart());
 
         mostProfitableGenreBtn.addActionListener(e ->
-                output.setText("Самый продаваемый жанр игр:\n" + controller.getMostProfitableGenre()));
+                output.setText("Самый продаваемый жанр игр:\n" +
+                        controller.getMostProfitableGenre()));
 
-        genrePreferencesByRegionBtn.addActionListener(e -> output.setText(controller.getGenrePreferencesByRegion()));
+        genrePreferencesByRegionBtn.addActionListener(e ->
+                output.setText(controller.getGenrePreferencesByRegion()));
 
-        getYearWithMostReleasesBtn.addActionListener(e -> output.setText(controller.getYearWithMostReleases()));
+        getYearWithMostReleasesBtn.addActionListener(e ->
+                output.setText(controller.getYearWithMostReleases()));
 
-        getPublisherWithMostReleasesBtn.addActionListener(e -> output.setText(controller.getPublisherWithMostReleases()));
+        getPublisherWithMostReleasesBtn.addActionListener(e ->
+                output.setText(controller.getPublisherWithMostReleases()));
 
-        getPlatformWithMostGenresBtn.addActionListener(e -> output.setText(controller.getPlatformWithMostGenres()));
+        getPlatformWithMostGenresBtn.addActionListener(e ->
+                output.setText(controller.getPlatformWithMostGenres()));
 
         clearDBBtn.addActionListener(e -> {
             try {

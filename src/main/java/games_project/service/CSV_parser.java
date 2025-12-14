@@ -1,4 +1,4 @@
-package games_project.infrastructure.parser;
+package games_project.service;
 
 import games_project.model.Game.game;
 

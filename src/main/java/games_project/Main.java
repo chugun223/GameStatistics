@@ -1,7 +1,7 @@
 package games_project;
 
 import games_project.controller.Controller;
-import games_project.infrastructure.parser.DataDownloader;
+import games_project.service.DataDownloader;
 import games_project.model.repository.DBmanager;
 import games_project.model.resolver.Resolver;
 import games_project.view_bot.GameBot;

@@ -29,7 +29,7 @@ public class GameBot extends TelegramLongPollingBot {
             case "/europe":
                 sendText(chatId, "Самая продаваемая в Европе:\n" + controller.getMostSellingInEurope());
                 break;
-            case "/japan":
+           case "/japan":
                 sendText(chatId, "Самая продаваемая игра в Японии с 2000 по 2006:\n" + controller.getBestSportsJapan2000_2006());
                 break;
             case "/genre":
