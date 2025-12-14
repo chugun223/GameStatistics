@@ -38,7 +38,7 @@ public class Controller {
     public void showSalesChart() {
         var salesByPlatform = resolver.getAverageGlobalSalesByPlatform();
         DefaultCategoryDataset dataset = chartMapper.mapToDataset(salesByPlatform);
-        chartDrawer.drawBarChart(dataset, "Average Global Sales by Platform", "Platform", "Global Sales");
+        chartDrawer.drawBarChart(dataset, "Мировые продажи по платформам", "Платформа", "Глобальные продажи");
     }
 
     public String getMostProfitableGenre() {
@@ -70,7 +70,7 @@ public class Controller {
     public void saveChartAsFile(String path) throws IOException {
         var salesByPlatform = resolver.getAverageGlobalSalesByPlatform();
         DefaultCategoryDataset dataset = chartMapper.mapToDataset(salesByPlatform);
-        chartDrawer.saveBarChart(dataset, "Sales", "Platform", "Sales", path);
+        chartDrawer.saveBarChart(dataset, "Продажи", "Платформа", "Продажи", path);
     }
 
     public String getPlatformWithMostGenres(){

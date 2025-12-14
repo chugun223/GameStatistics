@@ -10,7 +10,7 @@ public class chartMapper {
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 
         for (Map.Entry<String, Double> entry : data.entrySet()) {
-            dataset.addValue(entry.getValue(), "Global Sales", entry.getKey());
+            dataset.addValue(entry.getValue(), "Мировые продажи", entry.getKey());
         }
 
         return dataset;

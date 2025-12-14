@@ -13,7 +13,7 @@ public class MainWindow extends JFrame {
     public MainWindow(Controller controller) {
         this.controller = controller;
 
-        setTitle("Games");
+        setTitle("Статистика игр");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 

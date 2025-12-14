@@ -55,7 +55,7 @@ public class CSV_parser {
     public List<game> parseGames() throws IOException {
         InputStream stream = getClass().getClassLoader().getResourceAsStream("games.csv");
         if (stream == null)
-            throw new FileNotFoundException("games.csv not found");
+            throw new FileNotFoundException("games.csv не найден");
 
         List<game> result = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(stream))) {
