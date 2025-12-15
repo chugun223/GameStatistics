@@ -9,7 +9,7 @@ public class gameEntity {
     @DatabaseField(generatedId = true)
     private int id;
 
-    @DatabaseField(canBeNull = false)
+    @DatabaseField
     private int rank;
 
     @DatabaseField(canBeNull = false)
@@ -18,7 +18,7 @@ public class gameEntity {
     @DatabaseField(canBeNull = false)
     private String platform;
 
-    @DatabaseField(canBeNull = false)
+    @DatabaseField
     private int year;
 
     @DatabaseField(canBeNull = false)
@@ -27,19 +27,19 @@ public class gameEntity {
     @DatabaseField(canBeNull = false)
     private String publisher;
 
-    @DatabaseField(canBeNull = false)
+    @DatabaseField
     private double naSales;
 
-    @DatabaseField(canBeNull = false)
+    @DatabaseField
     private double euSales;
 
-    @DatabaseField(canBeNull = false)
+    @DatabaseField
     private double jpSales;
 
-    @DatabaseField(canBeNull = false)
+    @DatabaseField
     private double otherSales;
 
-    @DatabaseField(canBeNull = false)
+    @DatabaseField
     private double globalSales;
 
     public gameEntity(int rank, String name, String platform, int year, String genre, String publisher, double naSales, double euSales, double jpSales, double otherSales, double globalSales) {
@@ -54,11 +54,6 @@ public class gameEntity {
         this.jpSales = jpSales;
         this.otherSales = otherSales;
         this.globalSales = globalSales;
-    }
-
-    @Override
-    public String toString() {
-        return String.valueOf(globalSales);
     }
 
     public double getEUSales() {
@@ -93,6 +88,10 @@ public class gameEntity {
     }
     public String getPublisher(){
         return this.publisher;
+    }
+    @Override
+    public String toString() {
+        return String.valueOf(globalSales);
     }
     public gameEntity() {}
 }

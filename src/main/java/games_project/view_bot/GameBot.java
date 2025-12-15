@@ -8,17 +8,25 @@ import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.io.File;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class GameBot extends TelegramLongPollingBot {
 
     private final Controller controller;
+    private final ExecutorService executor;
 
     public GameBot(Controller controller) {
         this.controller = controller;
+        this.executor = Executors.newFixedThreadPool(10);
     }
 
     @Override
     public void onUpdateReceived(Update update) {
+        executor.submit(() -> processUpdate(update));
+    }
+
+    public void processUpdate(Update update) {
         if (!update.hasMessage() || !update.getMessage().hasText())
             return;
 
