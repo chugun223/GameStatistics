@@ -51,7 +51,8 @@ public class Controller {
 
     public void rewriteDB() throws SQLException {
         db.clearGames();
-        var parser = new CSV_parser();
+
+        CSV_parser parser = new CSV_parser();
         List<game> games;
 
         try {
@@ -61,10 +62,25 @@ public class Controller {
             return;
         }
 
-        for (game g : games) {
-            gameEntity entity = new gameEntity(g.rank, g.name, g.platform, g.year, g.genre, g.publisher, g.naSales, g.euSales, g.jpSales, g.otherSales, g.globalSales);
-            db.saveGame(entity);
-        }
+        db.runInTransaction(() -> {
+            for (game g : games) {
+                gameEntity entity = new gameEntity(
+                        g.rank,
+                        g.name,
+                        g.platform,
+                        g.year,
+                        g.genre,
+                        g.publisher,
+                        g.naSales,
+                        g.euSales,
+                        g.jpSales,
+                        g.otherSales,
+                        g.globalSales
+                );
+                db.saveGame(entity);
+            }
+            return null;
+        });
     }
 
     public void saveChartAsFile(String path) throws IOException {

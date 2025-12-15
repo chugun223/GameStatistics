@@ -3,17 +3,17 @@ package games_project.model.Game;
 import java.util.Objects;
 
 public class game{
-    public int rank;
-    public String name;
-    public String platform;
-    public int year;
-    public String genre;
-    public String publisher;
-    public double naSales;
-    public double euSales;
-    public double jpSales;
-    public double otherSales;
-    public double globalSales;
+    public final int rank;
+    public final String name;
+    public final String platform;
+    public final int year;
+    public final String genre;
+    public final String publisher;
+    public final double naSales;
+    public final double euSales;
+    public final double jpSales;
+    public final double otherSales;
+    public final double globalSales;
 
     public game(int rank, String name, String platform, int year, String genre, String publisher, double naSales, double euSales, double jpSales, double otherSales, double globalSales) {
         this.rank = rank;

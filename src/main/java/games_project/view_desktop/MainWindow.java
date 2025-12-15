@@ -14,7 +14,7 @@ public class MainWindow extends JFrame {
         this.controller = controller;
 
         setTitle("Статистика игр");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         setLocationRelativeTo(null);
 
         setPreferredSize(new Dimension(600, 400));
